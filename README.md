@@ -25,6 +25,8 @@ Powered by **LLaMA3** via **Ollama**, with local **SQLite** memory storage.
 ---
 
 ## 🚀 Installation
+read article 
+https://amitgajare.hashnode.dev/how-to-create-your-own-ai-girlfriend-chatbot-a-beginners-tutorial
 
 
 ## 🎮 Commands
