@@ -55,7 +55,7 @@ def load_last_n_messages(n=100):
 def get_random_greeting():
     """Return a random greeting/conversation starter that her_name would use"""
     greetings = [
-        "Hii Amit 🌸",
+        "Hii 🌸",
         "Kya kar rahe ho?",
         "Bhool gaye kya mujhe? 😄",
         "Kuch baat karni thi...",
@@ -317,4 +317,5 @@ Her_name ({response_style}): hmm..."""
 
     save_message("Her_name", reply)
     print(f"Her_name: {reply}\n")
+
 
