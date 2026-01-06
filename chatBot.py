@@ -85,14 +85,14 @@ def analyze_and_continue_topic():
     # Create a prompt for LLM to continue the conversation naturally
     topic_prompt = f"""{full_prompt_prefix}
 
-Here's your recent conversation with Amit:
-{recent_context}
+Here's your recent conversation with YOURNAME:
+{recent_context}        
 
-Now, after some time has passed, you want to start a new conversation with Amit. 
+Now, after some time has passed, you want to start a new conversation with YOURNAME. 
 Based on your previous chats, start with a natural message - maybe ask about something you discussed before, 
 or share a thought, or just reach out sweetly. Be casual, be yourself.
 
-Reply in just one short line (max 15 words):"""
+Reply in just one short line (max 20 words):"""
 
     try:
         response = client.generate(
@@ -308,7 +308,7 @@ Her_name ({response_style}): hmm..."""
     response = client.generate(
         model=model,
         prompt=prompt,
-        options={"temperature": 0.8, "num_predict": 40 if is_short else 80}
+        options={"temperature": 0.8, "num_predict": 150 if is_short else 250}
     )
 
     reply = response.get("response", "").strip()
@@ -317,5 +317,6 @@ Her_name ({response_style}): hmm..."""
 
     save_message("Her_name", reply)
     print(f"Her_name: {reply}\n")
+
 
 
